@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manufacturing Intelligence Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js for the production trend chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>⚙ ManuIntel</h2>
+
+        <p class="active">Dashboard</p>
+        <p>Machine Performance</p>
+        <p>Production Reports</p>
+    </aside>
+
+    <!-- Main dashboard -->
+    <main class="main-content">
+
+        <header>
+            <div>
+                <h1>Manufacturing Dashboard</h1>
+                <p>Production performance overview</p>
+            </div>
+
+            <span class="status">● System Online</span>
+        </header>
+
+        <!-- KPI Cards -->
+        <section class="kpi-container">
+
+            <div class="kpi-card">
+                <p>Total Production</p>
+                <h2 id="production">Loading...</h2>
+            </div>
+
+            <div class="kpi-card">
+                <p>Total Defects</p>
+                <h2 id="defects">Loading...</h2>
+            </div>
+
+            <div class="kpi-card">
+                <p>Defect Rate</p>
+                <h2 id="defect-rate">Loading...</h2>
+            </div>
+
+            <div class="kpi-card">
+                <p>Machines Monitored</p>
+                <h2 id="machines">Loading...</h2>
+            </div>
+
+        </section>
+
+        <!-- Production Trend Chart -->
+        <section class="chart-section">
+            <h2>Production Trend</h2>
+            <p>Monthly production output</p>
+
+            <div class="chart-container">
+                <canvas id="productionChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Machine Performance Table -->
+        <section class="table-section">
+            <h2>Machine Performance</h2>
+            <p>Production quality and machine output</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Machine ID</th>
+                            <th>Production</th>
+                            <th>Defects</th>
+                            <th>Defect Rate</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="machine-table">
+                        <tr>
+                            <td colspan="4">
+                                Waiting for backend connection...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            <p>Manufacturing Intelligence Dashboard | Powered by FastAPI and PostgreSQL</p>
+        </footer>
+
+    </main>
+
+    <!-- Your JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
